@@ -3,12 +3,12 @@ entries:
   test-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-04-29T16:52:01.163168+02:00"
+    created: "2024-04-29T17:16:40.135425+02:00"
     description: A Helm chart for Kubernetes
-    digest: 2182ffddad83b1e546c81e126a7ff5446858768756bea7f08cc7dd0030c60de3
+    digest: 9b6f7622107c85e44c80fad2694a5023481841f4152c6571cf968b61acd97870
     name: test-app
     type: application
     urls:
     - https://jhelbrinknl.github.io/test-helm-charts/test-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-29T16:52:01.162595+02:00"
+generated: "2024-04-29T17:16:40.135143+02:00"
