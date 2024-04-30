@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+applicationName: service-app
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
