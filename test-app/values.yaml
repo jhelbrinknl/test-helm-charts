@@ -8,6 +8,7 @@ applicationName: service-app
 
 imageAutomation:
   enabled: false
+  secret: ghcr-login-secret
   filter_tags: $ts
   filter_regex: (?P<ts>[0-9]+)
 
