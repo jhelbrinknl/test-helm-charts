@@ -23,5 +23,6 @@ metadata:
 spec:
   image: {{ .Values.image.repository }}
   interval: 5m0s
-  secretRef: {{ .Values.imageAutomation.secret }}
+  secretRef: 
+    name: {{ .Values.imageAutomation.secret }}
 {{- end }}
