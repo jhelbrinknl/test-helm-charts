@@ -1,0 +1,26 @@
+{{ if eq .Values.imageAutomation.enabled true }}
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: {{ .Values.applicationName }}-policy
+  namespace: flux-system
+spec:
+  filterTags:
+    extract: {{ .Values.imageAutomation.filter_tags }}
+    pattern: {{ .Values.imageAutomation.filter_regex }}
+  imageRepositoryRef:
+    name: {{.Values.applicationName }}
+  policy:
+    numerical:
+      order: asc
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: {{ .Values.applicationName }}
+  namespace: flux-system
+spec:
+  image: {{ .Values.image.repository }}
+  interval: 5m0s
+{{- end }}

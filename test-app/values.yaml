@@ -6,6 +6,11 @@ replicaCount: 1
 
 applicationName: service-app
 
+imageAutomation:
+  enabled: false
+  filter_tags: $ts
+  filter_regex: (?P<ts>[0-9]+)
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
